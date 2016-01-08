@@ -11,6 +11,13 @@ Add, remove, change, listing, and search of inventary.
 * py27-django18
 * sqlite3
 
+## Running
+
+ python manage.py makemigrations ISStuRa
+ python manage.py migrate
+ python manage.py runserver
+
+
 # Datenbase Schema
 
 ## Inventary Table
