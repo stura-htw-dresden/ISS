@@ -22,6 +22,7 @@ class Inventary(models.Model):
   vendor_str = models.CharField(max_length=255)
   amount = models.IntegerField(default=0)
   date_of_purchase = models.DateField(auto_now=True)
-  single_value = models.FloatField()
-  total_value = models.FloatField()
-  fair_value = models.FloatField()
+  single_value =    models.DecimalField(max_digits=11, decimal_places=2)
+  total_value =     models.DecimalField(max_digits=11, decimal_places=2)
+  fair_value =      models.DecimalField(max_digits=11, decimal_places=2)
+
