@@ -1,17 +1,30 @@
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 
 # Create your models here.
+@python_2_unicode_compatible  # only if you need to support Python 2
 class Location(models.Model):
   location = models.CharField(max_length=10)
+  def __str__ (self):
+    return self.location
 
+@python_2_unicode_compatible  # only if you need to support Python 2
 class Typ(models.Model):
   typ = models.CharField(max_length=25)
+  def __str__ (self):
+    return self.typ
 
+@python_2_unicode_compatible  # only if you need to support Python 2
 class Time_between_replacement(models.Model):
   tbr = models.IntegerField()
+  def __str__ (self):
+    return self.tbr
 
+@python_2_unicode_compatible  # only if you need to support Python 2
 class Category(models.Model):
   category = models.CharField(max_length=15)
+  def __str__ (self):
+    return self.category
 
 class Inventary(models.Model):
   typ = models.ForeignKey(Typ)
