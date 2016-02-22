@@ -1,0 +1,12 @@
+
+Tisch
+Stuhl
+Monitor
+Tastertur
+Switch
+Server
+Computer
+Schrank
+Drucker
+Scanner
+
