@@ -13,9 +13,15 @@ Add, remove, change, listing, and search of inventary.
 
 ## Running
 
+ python manage.py migrate
+
+ python manage.py createsuperuser
+
  python manage.py makemigrations ISStuRa
  
- python manage.py migrate
+ python manage.py migrate ISStuRa
+
+ python manage.py loaddata initial_data
  
  python manage.py runserver
 
