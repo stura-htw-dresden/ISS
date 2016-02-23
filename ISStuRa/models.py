@@ -18,11 +18,11 @@ class Typ(models.Model):
 class Time_between_replacement(models.Model):
   tbr = models.IntegerField()
   def __str__ (self):
-    return self.tbr
+    return str(self.tbr)
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Category(models.Model):
-  category = models.CharField(max_length=15)
+  category = models.CharField(max_length=15, unique=True)
   def __str__ (self):
     return self.category
 
