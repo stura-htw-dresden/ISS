@@ -4,19 +4,19 @@ from django.utils.encoding import python_2_unicode_compatible
 # Create your models here.
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Location(models.Model):
-  location = models.CharField(max_length=10)
+  location = models.CharField(max_length=10, unique=True)
   def __str__ (self):
     return self.location
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Typ(models.Model):
-  typ = models.CharField(max_length=25)
+  typ = models.CharField(max_length=25, unique=True)
   def __str__ (self):
     return self.typ
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Time_between_replacement(models.Model):
-  tbr = models.IntegerField()
+  tbr = models.IntegerField(unique=True)
   def __str__ (self):
     return str(self.tbr)
 
