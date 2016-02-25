@@ -1,0 +1,32 @@
+{% if inventary_list %}
+{% load staticfiles %}
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Bezeichnung	</th>
+		<th>Herstellerbez.</th>
+		<th>Typ</th>
+		<th>Ort</th>
+		<th>Anzahl</th>
+		<th>Kategorie</th>
+		<th>Einzelpreis</th>
+		<th>Gesamtpreis</th>
+	</tr>
+	{% for inventary in inventary_list %}
+	<tr>
+		<td>{{ inventary.id }}</td>
+		<td>{{ inventary.objectname }}</td>
+		<td>{{ inventary.vendor_str }}</td>
+		<td>{{ inventary.typ }}</td>
+		<td>{{ inventary.location }}</td>
+		<td>{{ inventary.date_of_purchase }}</td>
+		<td>{{ inventary.amount }}</td>
+		<td>{{ inventary.category }}</td>
+		<td>{{ inventary.single_value }}</td>
+		<td>{{ inventary.total_value }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+<p> No inventaries are available.</p>
+{% endif %}
