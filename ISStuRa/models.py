@@ -26,6 +26,7 @@ class Category(models.Model):
   def __str__ (self):
     return self.category
 
+@python_2_unicode_compatible  # only if you need to support Python 2
 class Inventary(models.Model):
   typ = models.ForeignKey(Typ)
   location = models.ForeignKey(Location)
@@ -38,4 +39,6 @@ class Inventary(models.Model):
   single_value =    models.DecimalField(max_digits=11, decimal_places=2)
   total_value =     models.DecimalField(max_digits=11, decimal_places=2)
   fair_value =      models.DecimalField(max_digits=11, decimal_places=2)
+  def __str__ (self):
+    return str(self.id) + " - " + self.objectname
 
