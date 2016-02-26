@@ -10,4 +10,4 @@ class IndexView(generic.ListView):
     context_object_name = 'inventary_list'
 
     def get_queryset(self):
-        return Inventary.objects.order_by('-id')
+        return Inventary.objects.order_by('-inventary_nr')
