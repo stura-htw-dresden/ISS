@@ -2,11 +2,12 @@
 {% load staticfiles %}
 <table>
 	<tr>
-		<th>ID</th>
+		<th>lfd.-Nr.</th>
 		<th>Bezeichnung	</th>
 		<th>Herstellerbez.</th>
 		<th>Typ</th>
 		<th>Ort</th>
+		<th>Kaufdatum<th>
 		<th>Anzahl</th>
 		<th>Kategorie</th>
 		<th>Einzelpreis</th>
@@ -14,7 +15,7 @@
 	</tr>
 	{% for inventary in inventary_list %}
 	<tr>
-		<td>{{ inventary.id }}</td>
+		<td>{{ inventary.inventary_nr }}</td>
 		<td>{{ inventary.objectname }}</td>
 		<td>{{ inventary.vendor_str }}</td>
 		<td>{{ inventary.typ }}</td>
